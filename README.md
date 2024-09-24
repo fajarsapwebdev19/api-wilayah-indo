@@ -4,7 +4,7 @@ REST API (Representational State Transfer Application Programming Interface) ada
 REST API yang saya buat adalah data wilayah indonesia meliputi data provinsi (provinces), kabupaten/kota (regencies), kecamatan (districts), dan kelurahan/desa (villages) menggunakan teknologi Laravel dan MYSQL Sebagai Databasenya. Biasanya data ini digunakan untuk membuat sebuah dropdown bertingkat untuk mencari data kabupaten/kota berdasarkan nama provinsi dan seterusnya.
 
 ## Versi PHP Minimal Untuk Menjalankan Api
-PHP v 7.4 >=
+PHP v 7.4 >= (Pastikan Sudah Menginstall Composer)
 
 ## Cara Menggunakan Api
 
@@ -80,7 +80,7 @@ GET https://wilayah-indo.dev19.my.id/api/data_villages
 Clone Repo
 
 ```javascript
-$ git clone https://github.com/fajarsapwebdev19/api-wilayah-indo
+$ git clone https://github.com/fajarsapwebdev19/api-wilayah-indo.git
 ```
 
 Setelah Selesai Clone
@@ -97,7 +97,7 @@ $ cp .env.example .env
 setelah sudah dilakukan semua silahkan konfigurasi file .env dengan code editor kesayangan kalian
 ```javascript
 DB_DATABASE=nama_database
-DB_USERNAME=root
+DB_USERNAME=username_database
 DB_PASSWORD=password_database //kosongkan jika anda ingin mengujinya di local
 ```
 
@@ -106,7 +106,14 @@ setelah sudah semua ketikan perintah berikut di terminal mengarah pada folder pr
 $ php artisan key:generate
 ```
 
-dan jalankan perintah berikut untuk menjalankan server local pastikan apache dan mysql dalam keadaan aktif di web serve local kalian
+setelah key tergenerate, selanjutnya ketikan perintah berikut untuk membuat table secara otomatis
+```php
+$ php artisan migrate
+```
+
+kemudian import database. lokasi database ada di database/backup/wilayah_indo_data.sql
+
+ketik perintah berikut untuk menjalankan server local pastikan apache dan mysql dalam keadaan aktif di web serve local kalian
 
 ```javascript
 $ php artisan serve
