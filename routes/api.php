@@ -25,3 +25,14 @@ Route::get('/regencies/{id}', [ApiController::class, 'get_regency']);
 Route::get('/districts/{id}', [ApiController::class, 'get_districts']);
 Route::get('/villages/{id}', [ApiController::class, 'get_villages']);
 
+// select 2
+
+// data kabupaten / kota
+Route::get('/select2/data_regencies', [ApiController::class, 'select2_get_regencies']);
+
+// data kecamatan
+Route::get('/select2/data_districts', [ApiController::class, 'select2_get_districts']);
+
+//data kelurahan / desa
+Route::get('/select2/data_villages', [ApiController::class, 'select2_get_villages']);
+

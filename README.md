@@ -79,30 +79,30 @@ GET https://wilayah-indo.dev19.my.id/api/data_villages
 
 Clone Repo
 
-```javascript
+```cmd
 $ git clone https://github.com/fajarsapwebdev19/api-wilayah-indo.git
 ```
 
 Setelah Selesai Clone
 
-```javascript
+```cmd
 $ cd api-wilayah-indo
 ```
 
 kemudian ketik perintah berikut untuk membuat file .env
-```javascript
+```cmd
 $ cp .env.example .env
 ```
 
 setelah sudah dilakukan semua silahkan konfigurasi file .env dengan code editor kesayangan kalian
-```javascript
+```php
 DB_DATABASE=nama_database
 DB_USERNAME=username_database
 DB_PASSWORD=password_database //kosongkan jika anda ingin mengujinya di local
 ```
 
 setelah sudah semua ketikan perintah berikut di terminal mengarah pada folder project ini
-```javascript
+```php
 $ php artisan key:generate
 ```
 
@@ -115,7 +115,7 @@ kemudian import database. lokasi database ada di database/backup/wilayah_indo_da
 
 ketik perintah berikut untuk menjalankan server local pastikan apache dan mysql dalam keadaan aktif di web serve local kalian
 
-```javascript
+```php
 $ php artisan serve
 ```
 
