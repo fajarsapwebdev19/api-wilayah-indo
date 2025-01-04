@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('villages', function (Blueprint $table) {
             $table->bigInteger('id')->primary();
-            $table->bigInteger('districts_id')->primary();
+            $table->bigInteger('districts_id');
             $table->string('name');
         });
     }
