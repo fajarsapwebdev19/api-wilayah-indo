@@ -15,64 +15,64 @@ Berikut adalah url request api beserta methodnya
 <b> Untuk Mendapatkan Data Provinsi </b>
 
 ```javascript
-GET https://wilayah-indo.dev19.my.id/api/provinces
+GET http://127.0.0.1:8000/api/provinces
 ```
 
 <b> Untuk Mendapatkan Data Kabupaten/Kota Berdasarkan Provinsi </b>
 
 ```javascript
-GET https://wilayah-indo.dev19.my.id/api/regencies/{provinces_id}
+GET http://127.0.0.1:8000/api/regencies/{provinces_id}
 ```
 
 Contoh :
 jika anda ingin mendapatkan nama kabupaten/kota dari provinsi banten
 
 ```javascript
-GET https://wilayah-indo.dev19.my.id/api/regencies/36
+GET http://127.0.0.1:8000/api/regencies/36
 ```
 
 <b> Untuk Mendapatkan Data Kecamatan Berdasarkan Kabupaten/Kota </b>
 
 ```javascript
-GET https://wilayah-indo.dev19.my.id/api/districts/{regencies_id}
+GET http://127.0.0.1:8000/api/districts/{regencies_id}
 ```
 
 Contoh :
 jika anda ingin mendapatkan nama kecamatan dari kota tangerang
 
 ```javascript
-GET https://wilayah-indo.dev19.my.id/api/districts/3671
+GET http://127.0.0.1:8000/api/districts/3671
 ```
 
 <b> Untuk Mendapatkan Data Kelurahan/Desa Bedasarkan Kecamatan </b>
 
 ```javascript
-GET https://wilayah-indo.dev19.my.id/api/villages/{districts_id}
+GET http://127.0.0.1:8000/api/villages/{districts_id}
 ```
 
 Contoh :
 jika anda ingin mendapatkan nama kelurahan/desa dari kecamatan neglasari
 
 ```javascript
-GET https://wilayah-indo.dev19.my.id/api/villages/3671051
+GET http://127.0.0.1:8000/api/villages/3671051
 ```
 
 <b> Untuk Mendapatkan Semua Data Kabupaten/Kota </b>
 
 ```javascript
-GET https://wilayah-indo.dev19.my.id/api/data_regencies
+GET http://127.0.0.1:8000/api/data_regencies
 ```
 
 <b> Untuk Mendapatkan Semua Data Kecamatan </b>
 
 ```javascript
-GET https://wilayah-indo.dev19.my.id/api/data_districts
+GET http://127.0.0.1:8000/api/data_districts
 ```
 
 <b> Untuk Mendapatkan Semua Data Kelurahan </b>
 
 ```javascript
-GET https://wilayah-indo.dev19.my.id/api/data_villages
+GET http://127.0.0.1:8000/api/data_villages
 ```
 
 ## Jika Ingin Disimpan ke hosting kalian
@@ -88,6 +88,12 @@ Setelah Selesai Clone
 ```cmd
 $ cd api-wilayah-indo
 ```
+
+```cmd
+$ composer install
+```
+
+tunggu proses install selesai
 
 kemudian ketik perintah berikut untuk membuat file .env
 ```cmd
